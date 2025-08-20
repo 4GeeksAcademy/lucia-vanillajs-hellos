@@ -1,5 +1,61 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2d5016;
+    font-family: Arial, sans-serif;
+}
+
+.playing-card {
+    width: 200px !important;
+    height: 300px !important;
     background: white;
+    border-radius: 10px;
+    border: 1px solid #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.top-number {
+    padding: 10px;
+    align-self: flex-start;
+}
+
+.suit {
+    font-size: 4em;
+    align-self: center;
+    margin: auto;
+}
+
+.bottom-number {
+    padding: 10px;
+    align-self: flex-end;
+    transform: rotate(180deg);
+    text-align: right;
+}
+
+.playing-card.heart .top-number,
+.playing-card.heart .bottom-number,
+.playing-card.heart .suit,
+.playing-card.diamond .top-number,
+.playing-card.diamond .bottom-number,
+.playing-card.diamond .suit {
+    color: red !important;
+}
+
+.playing-card.spade .top-number,
+.playing-card.spade .bottom-number,
+.playing-card.spade .suit,
+.playing-card.club .top-number,
+.playing-card.club .bottom-number,
+.playing-card.club .suit {
+    color: black !important;
 }
